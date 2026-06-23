@@ -1,4 +1,4 @@
-Commodity Cross-Sectional Momentum — Full Validation Backtest
+## Commodity Cross-Sectional Momentum - Strategy Backtesting 
 
 The objective of this project is not to discover a profitable commodity momentum strategy. The objective is to demonstrate a complete quantitative research workflow: data quality controls, bias detection, realistic execution modelling, robustness testing, risk analysis, and strategy validation. The commodity momentum strategy serves only as a case study for that process.
 
@@ -35,6 +35,7 @@ Capacity: limited to ~$250,000 AUM due to liquidity constraints (copper/CPER)
 
 📁 Project Structure
 
+```
 commodity_momentum/
 ├── config.py                    - all strategy parameters in one place
 ├── 01_data_pipeline.py          - data loading + quality checks
@@ -45,6 +46,7 @@ commodity_momentum/
 ├── 06_execution_analysis.py     - turnover, exposure, capacity
 ├── 07_robustness.py             - Monte Carlo, stress tests, regime analysis
 └── 08_report.py                 - correlation, edge decomposition, final conclusions
+```
 
 ✅ Validation Checklist (25/25 items)
 - Data: Survivorship Bias · Lookahead Bias · Data Snooping · Missing Data Check
@@ -61,25 +63,17 @@ commodity_momentum/
 bashgit clone https://github.com/aliceaginskaite/Commodity-momentum.git
 
 cd commodity_momentum
-
+```
 pip install -r requirements.txt
-
 python 01_data_pipeline.py    - downloads data, builds missing-data heatmap
-
 python 02_strategy_engine.py  - generates signals, visualizes positions
-
 python 03_backtest_core.py    - builds equity curve
-
 python 04_validation.py       - OOS / Walk-Forward / CV
-
 python 05_risk_metrics.py     - full risk table
-
 python 06_execution_analysis.py - turnover, exposure, capacity
-
 python 07_robustness.py       - Monte Carlo fan chart, stress tests
-
 python 08_report.py           - final report + "what kills the strategy"
-
+```
 
 🔍 What Works Well
 
